@@ -1,93 +1,37 @@
 ﻿@model IEnumerable<MVCReviewProject.Models.Review>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reviews";
 }
 
-<h2>Index</h2>
+<h2 class="heading">Reviews</h2>
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Island)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nature.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Attraction)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Headline)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Comment)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FileLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubmissionDate)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Island)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nature.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Attraction)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Headline)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SubmissionDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
 
-</table>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption text-center">
+                    <h2>@Html.DisplayFor(model => item.Attraction)</h2>
+                    <h3>@Html.DisplayFor(model => item.Category.Island)</h3>
+                     <h1>@Html.DisplayFor(model => item.FileLocation)</h1>
+                     @if (item.Price == 1) { item.FileLocation = "$"; }
+                     @if (item.Price == 2) { item.FileLocation = "$$"; }
+                     @if (item.Price == 3) { item.FileLocation = "$$$"; }
+                     @if (item.Price == 4) { item.FileLocation = "$$$$"; }
+                     @if (item.Price == 5) { item.FileLocation = "$$$$$"; }
+                     <h5>@Html.DisplayFor(model => item.FileLocation)</h5>
+                     <h3>"@Html.DisplayFor(model => item.Headline)"</h3>
+                    <p>@Html.ActionLink("View Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary" })</p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>

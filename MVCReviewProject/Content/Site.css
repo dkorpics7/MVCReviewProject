@@ -1,12 +1,65 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: white;
+    font-weight:bold;
+    height:100vh;
 }
 
 /* Set padding to keep content from hitting the edges */
+/* Put in background image */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url('Images/dtpics-276-1980.jpg');
+    background-size: cover;
+    background-repeat:repeat;
+    width:100vw;
+}
+
+/* Format Home Page */
+main {
+
+    background-color:lightcyan;
+    background-size:cover;
+    color:teal;
+    padding-top: 20px;
+    margin-left: -20px;
+    margin-right: -5px;
+    padding-bottom: 60px;
+}
+section.moveup {
+    padding-top:0px;
+}
+
+img.moveright {
+    margin-left:150px;
+}
+
+.locrow {
+    padding: 20px 20px 20px 20px;
+}
+
+.img-thumbnail {
+    border: 0px;
+}
+
+section {
+    padding: 40px 20px;
+    height: 222px;
+}
+
+section h4 {
+    font-style:italic;
+}
+
+section p {
+    line-height: 20px;
+}
+
+/* set shadow on main headings */
+h2.heading {
+    text-shadow: 3px 2px 1px #333;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -20,5 +73,171 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width:320px;
+}
+input.longbox {
+    max-width:500px;
+}
+textarea.longerbox {
+    max-width:none;
+    height:102px;
+}
+
+/* make navbar with a white background and blue text */
+.navbar {
+    background-color:teal;
+}
+
+ul.nav.navbar-nav a, a.navbar-brand {
+    color: white;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+a.navbar-brand {
+    position:absolute;
+    left:60px;
+    padding-right:100px;
+}
+
+.navbar-nav {
+    position:relative;
+    left:300px;
+}
+
+ul.nav.navbar-nav a:hover, a.navbar-brand:hover {
+    font-weight:900;
+}
+
+span.glyphicon {
+    position:absolute;
+    left:35px;
+    top:18px;
+    margin-right:10px;
+}
+
+
+/* format thumbnails to contain reviews */
+.img-thumbnail {
+    border: 5px solid teal;
+}
+
+.thumbnail .caption {
+    background-color: lightcyan;
+    border: 5px solid teal;
+    color: teal;
+    font-weight: bold;
+}
+
+.thumbnail .caption h1 {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.thumbnail .caption h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.thumbnail .caption h3 {
+    margin-top: 0px;
+    font-style: italic;
+}
+
+.thumbnail .caption a {
+    margin-top: 20px;
+}
+
+/* format detailed reviews */
+.details {
+    background-color: lightcyan;
+    border: 5px solid teal;
+    color: teal;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 40px 20px 20px;
+}
+.details h2 {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.details h3 {
+    margin-top:0px;
+    margin-bottom:20px;
+    font-style:italic;
+}
+p.headline {
+    margin-bottom:0px;
+}
+span.stars {
+    font-size:36px;
+}
+span.italic {
+    font-style: italic;
+    font-size:16px;
+    position:absolute;
+    top:9px;
+    padding-left:10px;
+}
+p.moveup {
+    font-style: italic;
+    font-weight: 400;
+    position:absolute;
+    top:27px;
+}
+p.movedown {
+    margin-top:15px;
+}
+
+/* format Delete page */
+.dl-horizontal dt {
+    width:200px;
+}
+.dl-horizontal dd {
+    position:relative;
+    margin-left: 230px;
+    
+}
+
+/* create semi-transparent textbox for text against blue background */
+.textbox {
+    background-color: rgbA(49, 130, 150, 0.8);
+    background-color: rgbA(0, 128, 128, 0.8);
+    width: 80vw;
+    padding: 15px 15px 15px 15px; 
+    border: 5px solid teal;
+    margin-bottom:30px;
+}
+.txtbox {
+    width:95vw;
+    padding-top:0px;
+}
+
+/* put contact information in a row of defined width and height */
+.singlerow {
+    padding 20px 20px 20px 20px;
+    height:75vh;
+    width:95vw;
+}
+
+.singlerow a, .white a {
+    color:white;
+}
+
+/* set contact email text color to white */
+address a {
+    color:white;
+}
+
+address a:hover {
+    color:white;
+}
+
+/* put footer at bottom of page */
+footer {
+    width:95vw;
 }

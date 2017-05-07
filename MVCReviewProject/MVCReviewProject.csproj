@@ -173,6 +173,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\dtpics-276-1980.jpg" />
+    <Content Include="Content\Images\hawaii-surfer-wipeout.jpg" />
+    <Content Include="Content\Images\honolulu-waikiki_1600_630_95_s_c1_c_c_0_0.jpg" />
+    <Content Include="Content\Images\Kauai-41.jpg" />
+    <Content Include="Content\Images\kauai.jpg" />
+    <Content Include="Content\Images\M-02_Wailua_Falls_web-LG_large.jpg" />
+    <Content Include="Content\Images\surf-culture-60-02.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

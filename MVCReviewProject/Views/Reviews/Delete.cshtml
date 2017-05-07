@@ -4,13 +4,21 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2 class="heading">Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Review</h4>
+<div class="singlerow textbox">
+    <h4>Review Entry submitted on @Html.DisplayFor(model => model.SubmissionDate)</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Attraction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attraction)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Category.Island)
         </dt>
@@ -20,27 +28,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nature.Type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nature.Type)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Author)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Author)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Attraction)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Attraction)
         </dd>
 
         <dt>
@@ -67,46 +59,14 @@
             @Html.DisplayFor(model => model.Comment)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FileLocation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FileLocation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SubmissionDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SubmissionDate)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
-
+<hr/>
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to Reviews", "Index")
         </div>
     }
 </div>

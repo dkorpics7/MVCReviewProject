@@ -1,106 +1,38 @@
 ﻿@model MVCReviewProject.Models.Review
 
+
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="heading">Details</h2>
 
-<div>
-    <h4>Review</h4>
+<div class="singlerow">
+
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Island)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Island)
-        </dd>
+    <div class="row details">
+        <div class="col-sm-6 col-md-3">
+            <h2>@Html.DisplayFor(model => model.Attraction)</h2>
+            <h3>@Html.DisplayFor(model => model.Category.Island)</h3>
+            <h5>Date Visited: @Html.DisplayFor(model => model.Date)</h5>
+            <h5>Category:     @Html.DisplayFor(model => model.Nature.Type)</h5>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nature.Type)
-        </dt>
+        <div class="col-sm-12 col-md-9">
+            <p class="headline">    
+               <span class="stars"> @Html.DisplayFor(model => model.FileLocation) </span>
+             <span class="italic"> "@Html.DisplayFor(model => model.Headline)" </span>
+            </p>
+            <p class="moveup" >By <span >@Html.DisplayFor(model => model.Author)</span> on @Html.DisplayFor(model => model.SubmissionDate)</p>
+            <p class="movedown">@Html.DisplayFor(model => model.Comment)</p>
+        </div>
+    </div>
+    <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.Nature.Type)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Author)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Attraction)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Attraction)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Headline)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Headline)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Comment)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Comment)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FileLocation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FileLocation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SubmissionDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SubmissionDate)
-        </dd>
-
-    </dl>
+    <p>
+        @Html.ActionLink("Update", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ID }) |
+        @Html.ActionLink("Back to Reviews", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
