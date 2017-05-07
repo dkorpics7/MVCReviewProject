@@ -173,6 +173,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\bigisland.jpg" />
     <Content Include="Content\Images\dtpics-276-1980.jpg" />
     <Content Include="Content\Images\hawaii-surfer-wipeout.jpg" />
     <Content Include="Content\Images\honolulu-waikiki_1600_630_95_s_c1_c_c_0_0.jpg" />
