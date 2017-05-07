@@ -105,11 +105,6 @@ a.navbar-brand {
     padding-right:100px;
 }
 
-.navbar-nav {
-    position:relative;
-    left:300px;
-}
-
 ul.nav.navbar-nav a:hover, a.navbar-brand:hover {
     font-weight:900;
 }
@@ -193,6 +188,10 @@ p.moveup {
 p.movedown {
     margin-top:15px;
 }
+div.col-md-6.movedown {
+    margin-top:20px;
+}
+
 
 /* format Delete page */
 .dl-horizontal dt {
