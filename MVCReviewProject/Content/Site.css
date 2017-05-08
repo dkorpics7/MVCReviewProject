@@ -3,7 +3,9 @@
     padding-bottom: 20px;
     color: white;
     font-weight:bold;
-    height:100vh;
+        background-image: url('Images/dtpics-276-1980.jpg');
+    background-size: cover;
+    width:100vw;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -11,9 +13,7 @@
 .body-content {
     padding-left: 20px;
     padding-right: 20px;
-    background-image: url('Images/dtpics-276-1980.jpg');
-    background-size: cover;
-    background-repeat:repeat;
+
     width:100vw;
 }
 
@@ -168,6 +168,7 @@ span.glyphicon {
 }
 p.headline {
     margin-bottom:0px;
+    height:30px;
 }
 span.stars {
     font-size:36px;
@@ -182,12 +183,18 @@ span.italic {
 p.moveup {
     font-style: italic;
     font-weight: 400;
+    /*
     position:absolute;
-    top:27px;
+    top:27px; */
 }
-p.movedown {
-    margin-top:15px;
+
+p.headline a {
+    float: right;
+    margin-left: 10px;
+    margin-right:10px;
+    color:teal;
 }
+
 div.col-md-6.movedown {
     margin-top:20px;
 }
@@ -207,7 +214,7 @@ div.col-md-6.movedown {
 .textbox {
     background-color: rgbA(49, 130, 150, 0.8);
     background-color: rgbA(0, 128, 128, 0.8);
-    width: 80vw;
+    width: 90vw;
     padding: 15px 15px 15px 15px; 
     border: 5px solid teal;
     margin-bottom:30px;

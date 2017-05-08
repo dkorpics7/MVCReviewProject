@@ -7,11 +7,6 @@
 <h2 class="heading">Reviews</h2>
 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-
 <div class="row">
     @foreach (var item in Model)
     {
@@ -32,6 +27,11 @@
                 </div>
             </div>
         </div>
-
     }
+
 </div>
+
+<p class="white">
+    @Html.ActionLink("Back to Top", "Index") | 
+    @Html.ActionLink("View Full Detailed List of Reviews", "Index", "Reviews1")
+</p>

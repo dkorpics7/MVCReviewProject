@@ -1,13 +1,11 @@
 ﻿@model MVCReviewProject.Models.Review
 
-
 @{
     ViewBag.Title = "Details";
 }
 
-<h2 class="heading">Details</h2>
 
-    <hr />
+<div class="singlerow">
 
     <div class="row details">
         <div class="col-sm-6 col-md-3">
@@ -23,14 +21,8 @@
                 <span class="italic"> "@Html.DisplayFor(model => model.Headline)" </span>
             </p>
             <p class="moveup">By <span>@Html.DisplayFor(model => model.Author)</span> on @Html.DisplayFor(model => model.SubmissionDate)</p>
-            <p>@Html.DisplayFor(model => model.Comment)</p>
+            <p class="movedown">@Html.DisplayFor(model => model.Comment)</p>
         </div>
     </div>
     <hr />
-
-    <p class="white">
-        @Html.ActionLink("Update", "Edit", new { id = Model.ID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = Model.ID }) |
-        @Html.ActionLink("Back to Reviews", "Index")
-    </p>
-
+</div>

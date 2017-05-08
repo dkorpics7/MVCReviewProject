@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCReviewProject.Models.Review>
+
+@{
+    ViewBag.Title = "Detailed Review List";
+}
+
+
+<h2 class="heading">Detailed Review List</h2>
+
+@foreach (var item in Model)
+{
+    <div class="row details">
+        <div class="col-sm-6 col-md-3">
+            <h2>@Html.DisplayFor(model => item.Attraction)</h2>
+            <h3>@Html.DisplayFor(model => item.Category.Island)</h3>
+            <h5>Date Visited: @Html.DisplayFor(model => item.Date)</h5>
+            <h5>Category:     @Html.DisplayFor(model => item.Nature.Type)</h5>
+        </div>
+
+        <div class="col-sm-12 col-md-9">
+            <p class="headline">
+                <span class="stars"> @Html.DisplayFor(model => item.FileLocation) </span>
+                <span class="italic">  "@Html.DisplayFor(model => item.Headline)" </span>
+                @Html.ActionLink("Update", "Edit", "Reviews", new { id = item.ID }, new { role = "button" })
+                @Html.ActionLink("Delete", "Delete", "Reviews", new { id = item.ID }, new { role = "button" })
+            </p>
+            <p class="moveup"> By @Html.DisplayFor(model => item.Author) on @Html.DisplayFor(model => item.SubmissionDate)</p>
+            <p > @Html.DisplayFor(model => item.Comment) </p>
+        </div>
+    </div>
+}
+
+<p class="white">
+    @Html.ActionLink("Back to Reviews", "Index", "Reviews")
+</p>

@@ -7,7 +7,7 @@
 <h2 class="heading">Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<div class="singlerow textbox">
+<div class="textbox">
     <h4>Review Entry submitted on @Html.DisplayFor(model => model.SubmissionDate)</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -61,12 +61,16 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-<hr/>
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to Reviews", "Index")
-        </div>
-    }
 </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <hr />
+
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <span class="white"> @Html.ActionLink("Back to Reviews", "Index")</span>
+    </div>
+    }
+
