@@ -22,7 +22,7 @@
                      @if (item.Price == 4) { item.FileLocation = "$$$$"; }
                      @if (item.Price == 5) { item.FileLocation = "$$$$$"; }
                      <h5>@Html.DisplayFor(model => item.FileLocation)</h5>
-                     <h3>"@Html.DisplayFor(model => item.Headline)"</h3>
+                     <h3 class="minheadline">"@Html.DisplayFor(model => item.Headline)"</h3>
                     <p>@Html.ActionLink("View Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary" })</p>
                 </div>
             </div>

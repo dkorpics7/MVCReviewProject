@@ -137,6 +137,10 @@ span.glyphicon {
 .thumbnail .caption h2 {
     margin-bottom: 10px;
     font-weight: bold;
+    min-height: 66px;
+}
+.minheadline {
+    min-height: 52px;
 }
 
 .thumbnail .caption h3 {
